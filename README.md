@@ -1,4 +1,4 @@
-# DSC_RegressionMachineLearning
+# Regression Machine Learning
 
 ## Goals of the Project
 - Prepare data for regression machine learning
