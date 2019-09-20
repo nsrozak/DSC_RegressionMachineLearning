@@ -57,7 +57,7 @@
 	- Homes sold with a waterfront have the greatest absolute prediction difference
 	- Homes sold with a view rating of 4 have the greatest absolute prediction difference
 	- Homes sold with 7 bathrooms have the greatest absolute prediction difference
-- One should be wary of sale prices predicted for homes with these attributes
+		- Predicting prices of homes with these attributes may be less accurate, so further investigation is recommended before accepting the predicted value as fact
 ## Analysis
 - Model may improve if more outliers are removed during data cleaning
 	- The greatest differences in observed and actual prices occurred for homes selling at high prices 
