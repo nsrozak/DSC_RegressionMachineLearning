@@ -53,11 +53,11 @@
 - Support Vector Regression is the worst at predicting housing prices since it has the largest mean absolute error and the largest mean squared error
 	- Additionally, all predictions are less than $600000, so the model is not trained to recognize expensive homes
 - For all models, grouping absolute prediction difference by category shows
-		- Homes sold in East Urban have the greatest absolute prediction difference
-		- Homes sold with a waterfront have the greatest absolute prediction difference
-		- Homes sold with a view rating of 4 have the greatest absolute prediction difference
-		- Homes sold with 7 bathrooms have the greatest absolute prediction difference
-	- One should be wary of sale prices predicted for homes with these attributes
+	- Homes sold in East Urban have the greatest absolute prediction difference
+	- Homes sold with a waterfront have the greatest absolute prediction difference
+	- Homes sold with a view rating of 4 have the greatest absolute prediction difference
+	- Homes sold with 7 bathrooms have the greatest absolute prediction difference
+- One should be wary of sale prices predicted for homes with these attributes
 ## Analysis
 - Model may improve if more outliers are removed during data cleaning
 	- The greatest differences in observed and actual prices occurred for homes selling at high prices 
