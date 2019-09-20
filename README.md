@@ -23,24 +23,15 @@
 	- Examine whether there is a trend or change in variation
 ### WashingtonHouseSales-KNearestNeighbors.ipynb
 - Implement K Nearest Neighbors with Sci-Kit Learn package
-	- Use random search and grid search to tune hyperparameters
-		- Maximize the negative mean squared error
+	- Use random search and grid search to tune hyperparameters by maximizing the negative mean squared error
 - Results
 	- Mean Absolute Error: 131426.5878
 	- Mean Squared Error: 58914690993.4774
 ### WashingtonHouseSales-KNearestNeighborsAnalysis.ipynb
-- Create graphs analyzing predicted price and actual price, and the absolute value of differences in predicted price and actual price
-	- Shows predicted price and actual price have a fairly linear relationship
-	- Shows some large absolute differences in prediction occur at all price levels, but the largest difference occurs at the highest price
-		- Homes sold in Seattle and East Urban have the largest absolute prediction difference
-		- Homes sold with a waterfront have the largest absolute prediction difference
-		- Homes sold with a view rating of 4 have the largest absolute prediction difference
-		- Homes sold with a condition rating of 5 have the largest absolute prediction difference
-		- Homes sold with 7 bedrooms have the largest absolute prediction difference
+- Create graphs showing relationship between predicted price, actual price, and absolute differences between predicted price and actual price
 ### WashingtonHouseSales-RandomForest.ipynb
 - Implement Random Forest with Sci-Kit Learn package
-	- Use random search and grid search to tune hyperparameters
-		- Maximize the negative mean squared error
+	- Use random search and grid search to tune hyperparameters by maximizing the negative mean squared error
 - Results
 	- Mean Absolute Error: 117519.3716
 	- Mean Squared Error: 44596532085.3743
@@ -48,34 +39,27 @@
 - Examine feature importance
 	- Important features were 'sqftAbove' and 'bathroom'
 	- Unimportant features were 'location'
-- Create graphs analyzing predicted price and actual price, and the absolute value of differences in predicted price and actual price
-	- Shows predicted price and actual price have a fairly linear relationship
-	- Shows some large absolute differences in prediction occur at all price levels, but the largest difference occurs at the highest price
-		- Homes sold in East Urban and Seattle have the largest absolute prediction differences
-		- Homes sold with a waterfront have the largest absolute prediction differences
-		- Homes sold with a view rating of 3 have the largest absolute prediction differences
-		- Homes sold with a condition rating of 5 have the largest absolute prediction differences
-		- Homes sold with 7 bedrooms have the largest absolute prediction differences
-		- Homes sold with 4.25 bathrooms have the largest absolute prediction differences
+- Create graphs showing relationship between predicted price, actual price, and absolute differences between predicted price and actual price
 ### WashingtonHouseSales-SupportVectorRegression.ipynb
 - Implement Support Vector Regression with Sci-Kit Learn package
-	- Use random search and grid search to tune hyperparameters
-		- Maximize the negative mean squared error
+	- Use random search and grid search to tune hyperparameters by maximizing the negative mean squared error
 - Results
 	- Mean Absolute Error: 203642.6582
 	- Mean Squared Error: 142434180920.8759
 ### WashingtonHouseSales-SupportVectorRegressionAnalysis.ipynb
-- Create graphs analyzing predicted price and actual price, and the absolute value of differences in predicted price and actual price
-	- Shows predicted price and actual price are broken into two groups
-		- The first group has predictions of less than $400000
-		- The second group has predictions of $450000 to $600000
-		- Both show a positive relationship, but both underestimate the sale price of homes
-		- All predictions are less than $600000
-	- Shows absolute differences in prediction initially decrease, and increase linearly for sale prices greater than $500000
+- Create graphs showing relationship between predicted price, actual price, and absolute differences between predicted price and actual price
+## Conclusion
+- Random Forest model is the best at predicting housing prices since it has the smallest mean absolute error and the smallest mean squared error
+- Support Vector Regression is the worst at predicting housing prices since it has the largest mean absolute error and the largest mean squared error
+	- Additionally, all predictions are less than $600000, so the model is not trained to recognize expensive homes
+- For all models, grouping absolute prediction difference by category shows
 		- Homes sold in East Urban have the greatest absolute prediction difference
 		- Homes sold with a waterfront have the greatest absolute prediction difference
 		- Homes sold with a view rating of 4 have the greatest absolute prediction difference
-		- Homes sold with condition ratings of 5 have the greatest absolute prediction difference
-		- Homes sold with 2.5 floors have the greatest absolute prediction difference
-		- Homes sold with 7 bedrooms have the greatest absolute prediction difference
-		- Homes sold with 4.75 bathrooms have the greatest absolute prediction difference
+		- Homes sold with 7 bathrooms have the greatest absolute prediction difference
+	- One should be wary of sale prices predicted for homes with these attributes
+## Analysis
+- Model may improve if more outliers are removed during data cleaning
+	- The greatest differences in observed and actual prices occurred for homes selling at high prices 
+- None of the models are overfitted since the models behave similarly on training, validation, and test sets
+	- All features can be used since the model is not overfitted
